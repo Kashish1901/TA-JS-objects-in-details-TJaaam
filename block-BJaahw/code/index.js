@@ -11,19 +11,19 @@ function createUser(name , age){
     user.name = name;
     user.age = age
     user.sayHello= function(){
-        alert `Welcome ${user.name}`
+        alert(`Welcome ${user.name}`);
     }
     return user;
 }
 
 // 3. Use the data (name, age) of two different person to create the object using `createUser`. Store the returned value in `personOne` and `personTwo`.
-let personOne = createUser("Arya" ,21);
-let personTwo = createUser("john" ,20);
+//let personOne = createUser("Arya" ,21);
+//let personTwo = createUser("john" ,20);
 
 // 4. Change the code inside `createUser` in such a way that the methods `sayHello` doesn't have to be in all object. Use the prototypal nature. (Hint Object.create())
 let userMethod = {
     sayHello : function(){
-        alert `Welcome ${this.name}`;
+        alert (`Welcome ${this.name}`);
     }
 }
 function createUser(name , age){
@@ -40,15 +40,16 @@ function CreateUser(name , age){
 }
 CreateUser.prototype = {
     sayHello : function(){
-        alert `Welcome ${this.name}`;
+        alert (`Welcome ${this.name}`);
     }, 
 }
 // 6. Use `new` to create two new objects with the data of two different person and re-assign the value of `personOne` and `personTwo`.
-personOne =new  CreateUser("Stark" , 11);
- personTwo =new  CreateUser("Mark" , 30);
+//let personOne =new  CreateUser("Stark" , 11);
+//let  personTwo =new  CreateUser("Mark" , 30);
 
 // 7. Try calling `personOne.sayHello()` and `personTwo.sayHello()`. Check if you get the required output.
-
+personOne.sayHello();
+personTwo.sayHello();
 // 8. Convert the `createUser` function into `User` class.
 class User{
     constructor(name , age){
@@ -56,10 +57,12 @@ class User{
         this.age = age;
     }
     sayHello(){
-        alert `Welcome ${this.name}`
+        alert(`Welcome ${this.name}`);
     }
 }
 // 9. Check by creating two instance of the class using data of two different persons and re-assign the value of `personOne` and `personTwo`
-personOne = new User("Alen" , 15);
-personTwo = new User("George" , 23);
+let personOne = new User("Alen" , 15);
+let personTwo = new User("George" , 23);
 // 10. Try calling `personOne.sayHello()` and `personTwo.sayHello()`. Check if you get the required output.
+personOne.sayHello();
+personTwo.sayHello();
