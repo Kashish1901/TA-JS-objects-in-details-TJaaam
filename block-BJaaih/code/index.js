@@ -76,7 +76,9 @@ console.log(strings.unique()); // ['h', 'e', 'l', 'o', 'w', 'r', 'd']
 5. Add a method named `intersection` to Array.prototype. The method intersection will accept an array and returns a new
 array that will contain only element that is common in both the array.
 */
-
+Array.prototype.intersection = function(array){
+  
+}
 // You code goes here
 
 // Test to check the shuffle method (It will return different output every time you call)
@@ -90,7 +92,9 @@ chunk will be the remaining elements. `length` should default to 1.
 */
 
 // You code goes here
+Array.prototype.chunk = function(length){
 
+}
 // Test to check the shuffle method (It will return different output every time you call)
 console.log(num.chunk(2)); // [[1, 2], [3, 4], [2, 3], [6, 7], [7]]
 console.log(num.chunk()); // [[1], [2], [3], [4], [2], [3], [6], [7], [7]]
