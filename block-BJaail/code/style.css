@@ -43,4 +43,25 @@ label {
   color: white;
   text-align: center;
   vertical-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+.heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.head h2, .head h3, .head p, .head span {
+  font-size: 18px;
+  vertical-align: middle;
+  text-align: left;
 }/*# sourceMappingURL=style.css.map */
